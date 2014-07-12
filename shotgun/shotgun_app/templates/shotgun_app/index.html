@@ -3,19 +3,21 @@
 
 
 	<div id="container">
-	  {% if newsfeed %}
-    	{% for item in newsfeed %}
-       	  <div id="content">
-       	  	<img src="smiley.gif" width="60"height="60">
-       	  	{{item.1.name}} <br>
-       	  	{{item.0.event_name}} | {{item.0.event_description}} | {{item.0.event_date}} | {{item.0.location}}
-    	  </div>
-    	{% endfor %}
-	  {% else %}
-        <div id="content">
-          <p>No events are available.</p>
-        </div>
-      {% endif %}
+	  <div id="content">
+	    {% if newsfeed %}
+    	  {% for item in newsfeed %}
+       	    <div id="box">
+       	  	  <img src="smiley.gif" width="60"height="60">
+       	  	  {{item.1.name}} <br>
+       	  	  {{item.0.event_name}} | {{item.0.event_description}} | {{item.0.event_date}} | {{item.0.location}}
+    	    </div>
+    	  {% endfor %}
+	    {% else %}
+          <div id="box">
+            <p>No events are available.</p>
+          </div>
+        {% endif %}
+      </div>
       <div id="profile">
       	<div id = "picture">
       	  <img src="smiley.gif" width="125"height="125">
