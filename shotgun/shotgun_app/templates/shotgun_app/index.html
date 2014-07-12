@@ -61,17 +61,17 @@
     	<ul>
     	{% for event in latest_event_list %}
        	  <div id="content">
-       	  	{{event.event_name}}, {{event.event_description}}, {{event.event_date}}, {{event.location}}
+       	  	{{event.event_name}} | {{event.event_description}} | {{event.event_date}} | {{event.location}}
     	  </div>
     	{% endfor %}
     	</ul>
 	  {% else %}
         <p>No events are available.</p>
       {% endif %}
-      <div id="sidebar">
-    	{{user.name}}
-      </div>
 	</div>
+	<div id="sidebar">
+      {{user.name}}
+    </div>
 
 </body>
 </html>
