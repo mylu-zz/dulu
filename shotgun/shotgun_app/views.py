@@ -5,10 +5,10 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 from shotgun_app.models import Users,Events,Attending, Friends
+import datetime
 
 def index(request):
     latest_event_list = Events.objects.all().order_by('-publish_time')[:15]
-    print latest_event_list
     latest_author_list = []
     for event in latest_event_list:
     	latest_author_list.append(Users.objects.get(pk = latest_event_list[0].author_id))
@@ -30,11 +30,18 @@ def create_handler(request):
         description = request.POST['edescription']
         location = request.POST['location']
         privacy = request.POST['privacy']
+        if request.POST['etime'] and request.POST['edate']:
+            time = request.POST['etime'].split(':')
+            date = request.POST['edate'].split('-')
+            time = [int(x) for x in time]
+            date = [int(x) for x in date]
+            edatetime = datetime.datetime(year=date[0],month=date[1],day=date[2],hour=time[0],minute=time[1])
+        else:
+            edatetime = None
         if not location:
-        	location = ''
+            location = ''
         user = Users.objects.get(pk=1)
-        print privacy
-        e = Events(event_name=name, event_description=description, author_id=user.user_id, publish_time=timezone.now(), location=location,privacy=privacy)
+        e = Events(event_name=name, event_description=description, author_id=user.user_id, publish_time=timezone.now(), location=location,privacy=privacy,event_time=edatetime)
         e.save()
         return index(request)
    
