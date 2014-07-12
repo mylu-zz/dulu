@@ -1,0 +1,25 @@
+<h3>Create an Event</h3>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'shotgun_app:create_handler' %}" method="post">
+{% csrf_token %}
+
+	<p><input name="ename" type="text" placeholder="Event Name" /></p>
+
+	<p><input name="edescription" type="text" placeholder="Event Description" /></p>
+
+	Privacy <br/>
+    <input type="radio" name="privacy" id="0" value="friends" />friends
+    <label "privacy"</label><br />
+    <input type="radio" name="privacy" id="1" value="friends of friends" />friends of friends
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+    <input type="radio" name="privacy" id="2" value="errone" />errone
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+
+<br/>
+    Optional: <br/>
+    <p><input name="location" type="text" placeholder="Location" /></p>
+
+<input type="submit" value="Create" />
+</form>
