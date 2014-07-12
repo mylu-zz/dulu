@@ -1,3 +1,7 @@
+body {
+  background-color: #e9eaed;
+}
+
 #container {
   width: 900px;
   margin-left: auto;
@@ -9,9 +13,17 @@
   float: left;
   width: 580px;
   border-style: solid;
-  border-color: #767676;
+  border-color: #dee0e4;
   border-width: 1px;
   margin-right: 20px;
+  background-color: #fff;
+  padding: 10px 10px;
+}
+
+#box {
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
 }
 
 #profile {
@@ -19,9 +31,10 @@
   width: 300px;
   height: 150px;
   border-style: solid;
-  border-color: #767676;
+  border-color: #dee0e4;
   border-width: 1px;
   padding: 10px 10px;
+  background-color: #fff;
 }
 
 #picture {
