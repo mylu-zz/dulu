@@ -21,4 +21,20 @@
   border-style: solid;
   border-color: #767676;
   border-width: 1px;
+  padding: 10px 10px;
+}
+
+#picture {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-style: bold;
+}
+
+#information {
+  float: right;
+  width: 140px;
+  height: 90px;
+  margin-bottom: 10px;
 }
