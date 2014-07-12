@@ -1,3 +1,7 @@
+{% extends "shotgun_app/base.html" %}
+{% block content %}
+
+
 <h3>Create an Event</h3>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
@@ -23,3 +27,5 @@
     Event date: <input type="date" name="edate"> <input type="time" name="etime"> 
 <input type="submit" value="Create" />
 </form>
+
+{% endblock content %}
