@@ -1,24 +1,19 @@
-<h1>{{ Create an Event }}</h1>
+<h1>Create an Event</h1>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'polls:create' poll.id %}" method="post">
+<form action="{% url 'shotgun_app:create_handler'%}" method="post">
 {% csrf_token %}
 
-	<p><input class="name" type="text" placeholder="Event Name" /></p>
+	<p><input name="event_name" class="name" type="text" placeholder="Event Name" /></p>
 
-	<p><input class="description" type="text" placeholder="Event Description" /></p>
-
-	<p>
-	<input class="start_seconds" type="text" placeholder="Start" />
-	<input class="end_seconds" type="text" placeholder="End" />
-	</p>
-
+	<p><input name="event_description" class="description" type="text" placeholder="Event Description" /></p>
+<!--
     <input type="radio" name="privacy" id="0" value="friends" />
-    <input type="radio" name="privacy" id="0" value="friends of friends" />
-    <input type="radio" name="privacy" id="0" value="errone" />
+    <input type="radio" name="privacy" id="1" value="friends of friends" />
+    <input type="radio" name="privacy" id="2" value="errone" />-->
 
-    
+
 {% endfor %}
 <input type="submit" value="Vote" />
 </form>
