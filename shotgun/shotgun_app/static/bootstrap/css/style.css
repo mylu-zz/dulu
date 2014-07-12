@@ -16,14 +16,16 @@ body {
   border-color: #dee0e4;
   border-width: 1px;
   margin-right: 20px;
-  background-color: #fff;
-  padding: 10px 10px;
+  background-color: #e9eaed;
 }
 
 #box {
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
+  width: 580px;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-color: #dee0e4;
 }
 
 #profile {
