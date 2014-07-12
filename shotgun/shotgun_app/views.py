@@ -7,7 +7,6 @@ from django.template import RequestContext, loader
 from shotgun_app.models import Users,Events,Attending, Friends
 
 def index(request):
-    template = loader.get_template('shotgun_app/index.html')
-    context = RequestContext(request, {
-    })
-    return HttpResponse(template.render(context))
+    latest_event_list = Events.objects.all().order_by('-event_date')[:15]
+    context = {'latest_event_list': latest_event_list}
+    return render(request, 'shotgun_app/index.html', context)

@@ -9,10 +9,10 @@
   <meta name="author" content="Linda Du and Max Lu">
   <meta name="keywords" content="Meet Up, Social Network, Matching, Hang Out, Bored, Find Friends, Fun, Friends">
 
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-   <link rel="stylesheet" href="bootstrap/css/style.css">
+  <link rel="stylesheet"  type = "text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
+   <link rel="stylesheet" type = "text/css" href="{{ STATIC_URL }}bootstrap/css/style.css"/>
 
-  <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -57,8 +57,20 @@
 	</nav>
 
 	<div id="container">
-	  <div id="content">hello</div>
-      <div id="sidebar">to you</div>
+	  {% if latest_event_list %}
+    	<ul>
+    	{% for event in latest_event_list %}
+       	  <div id="content">
+       	  	{{event.event_name}}, {{event.event_description}}, {{event.event_date}}, {{event.location}}
+    	  </div>
+    	{% endfor %}
+    	</ul>
+	  {% else %}
+        <p>No events are available.</p>
+      {% endif %}
+      <div id="sidebar">
+    	{{user.name}}
+      </div>
 	</div>
 
 </body>
