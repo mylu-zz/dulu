@@ -2,10 +2,14 @@ from django.db import models
 
 class Users(models.Model):
     user_id = models.IntegerField(primary_key=True)
-    image = models.CharField(max_length=100)
+    image = models.CharField(max_length=200)
     email = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
+    about = models.CharField(max_length=200)
+    age = models.IntegerField()
+    location = models.CharField(max_length=200)
+
     def __unicode__(self):  # Python 3: def __str__(self):
         return self.name
 
