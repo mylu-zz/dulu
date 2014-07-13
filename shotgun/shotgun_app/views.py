@@ -44,4 +44,7 @@ def create_handler(request):
         e = Events(event_name=name, event_description=description, author_id=user.user_id, publish_time=timezone.now(), location=location,privacy=privacy,event_time=edatetime)
         e.save()
         return index(request)
+
+def landing(request):
+    return render(request, 'shotgun_app/landing.html')
    

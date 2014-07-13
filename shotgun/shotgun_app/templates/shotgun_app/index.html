@@ -8,8 +8,17 @@
     	  {% for item in newsfeed %}
        	    <div id="box">
        	  	  <img src="smiley.gif" width="60"height="60">
-       	  	  {{item.1.name}} <br>
-       	  	  {{item.0.event_name}} | {{item.0.event_description}} | {{item.0.event_date}} | {{item.0.location}}
+       	  	  {{item.1.name}} -  {{item.0.event_name}}<br>
+       	  	  {{item.0.event_description}} <br>
+       	  	  {{item.0.event_date}} <br>
+       	  	  {{item.0.location}} <br>
+
+       	      <div
+       	        class="fb-like"
+  				data-send="true"
+  				data-width="450"
+  				data-show-faces="true">
+			  </div>
     	    </div>
     	  {% endfor %}
 	    {% else %}

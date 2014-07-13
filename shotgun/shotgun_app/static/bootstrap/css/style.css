@@ -1,5 +1,6 @@
 body {
   background-color: #e9eaed;
+  font-family: 'Lato';
 }
 
 #container {
@@ -52,4 +53,178 @@ body {
   width: 140px;
   height: 90px;
   margin-bottom: 10px;
+}
+
+/*
+ * Landing page
+ */
+
+#intro {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 90px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .gen-container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .gen-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gen-container {
+  width: 1170px;
+  }
+}
+
+.gen-container:before,
+.gen-container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+
+.gen-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.intro-container {
+  background-color: #fff;  
+}
+
+@media (max-width: 992px) {
+  .intro-container {
+    width: 1000px;
+    margin-left: -120px;
+    margin-right: -50px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    width: 800px;
+    margin-left: -50px;
+    margin-right: -100px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-container {
+    width: 500px;
+    height: 380px;
+    margin-top: 50px;
+    margin-left: -50px;
+    margin-right: -50px; 
+  }
+}
+
+.intro-text { 
+  color: #000;
+    position: absolute;  
+    top: 160px;   
+    text-align: center;
+    left: 30px;
+    right: 30px;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    top: 100px;
+  }
+}
+
+intro-title {
+  font-size: 78px;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-weight: 700;
+  margin: 0 auto;
+  color: #0097c6;
+  font-weight: normal;
+  line-height: 90px;
+}
+
+@media (max-width: 480px) {
+  intro-title {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  .intro-text {
+    top: 80px;
+  }
+}
+
+#intro-block {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 46px;
+  line-height: 60px;
+}
+
+@media (max-width: 992px) {
+  #intro-block {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  #intro-block {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 35px;
+  }
+}
+
+.btn-intro {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #0097c6;
+  border-color: #0097c6;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.btn-intro:hover {
+  color: #fff;
+  background-color: #007093;
+}
+
+.btn-large {
+  padding: 10px 60px;
+  font-size: 25px;
+  line-height: 1.33;
+  border-radius: 4px;
+  border: none;
+  margin: 20px auto;
+  font-weight: 400;
+}
+
+btn-text {
+  font-size: 25px;
+  font-weight: 400;
 }
