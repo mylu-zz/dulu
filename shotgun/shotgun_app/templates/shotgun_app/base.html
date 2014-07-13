@@ -12,11 +12,20 @@
   <meta name="keywords" content="Meet Up, Social Network, Matching, Hang Out, Bored, Find Friends, Fun, Friends">
 
   <link rel="stylesheet"  type = "text/css" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
-   <link rel="stylesheet" type = "text/css" href="{{ STATIC_URL }}bootstrap/css/style.css"/>
+  <link rel="stylesheet" type = "text/css" href="{{ STATIC_URL }}bootstrap/css/style.css"/>
 
    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}main.js"></script>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+         
+  <!-- jQuery from Google -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+  <!-- The main JavaScript/CSS Files -->
+  <script src="{{ STATIC_URL }}main.js"></script>   
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -54,7 +63,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">Shotgun</a>
+	      <a class="navbar-brand" href="/shotgun_app">Shotgun</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,4 +89,6 @@
 	{% block content %}
 	{% endblock content %}
 </body>
+<footer>
+</footer>
 </html>

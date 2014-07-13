@@ -40,6 +40,28 @@ body {
   background-color: #fff;
 }
 
+#left_bar {
+  float: left;
+  width: 300px;
+  height: 150px;
+  border-style: solid;
+  border-color: #dee0e4;
+  border-width: 1px;
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+#right_main {
+  float: right;
+  width: 600px;
+  border-style: solid;
+  border-color: #dee0e4;
+  border-width: 1px;
+  padding: 10px 10px;
+  margin-right: 20px;
+  background-color: #fff;
+}
+
 #picture {
   float: left;
   margin-right: 10px;
@@ -227,4 +249,13 @@ intro-title {
 btn-text {
   font-size: 25px;
   font-weight: 400;
+
+.btn-lg {
+  background-color: #0097c6;
+  color: #fff;
+}
+
+.btn-lg:hover {
+  color: #fff;
+  background-color: #007093;
 }
