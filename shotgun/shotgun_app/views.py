@@ -21,6 +21,15 @@ def index(request):
     }
     return render(request, 'shotgun_app/index.html', context)
 
+def chats(request):
+    conversations = Friends.objects.filter(pk=1)
+    user = Users.objects.get(pk=1)
+    context = {
+    	'conversations': conversations,
+    	'user': user
+    }
+    return render(request, 'shotgun_app/chats.html', context)
+
 def create(request):
     return render(request, 'shotgun_app/create.html')
 

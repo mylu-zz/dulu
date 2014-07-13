@@ -1,0 +1,19 @@
+{% extends "shotgun_app/base.html" %}
+{% block content %}
+    
+<div class="left_bar" id="inbox" align="left"></div>
+  {% if conversations %}
+    {% for convo in conversations %}
+      <div id="box">
+        <img src="user.image" width="60"height="60">
+        {{convo.conversation}}
+      </div>
+    {% endfor %}
+  {% else %}
+    <div id="right_main">
+      <p>No messages yet!</p>
+    </div>
+  {% endif %}
+<div class="span9" id="conversation" style="height:80%">
+
+{% endblock content %}
