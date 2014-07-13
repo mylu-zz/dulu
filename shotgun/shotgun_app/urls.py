@@ -6,6 +6,6 @@ urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'^create$', views.create, name='create'),
     url(r'^index$', views.create_handler, name='create_handler'),
-    url(r'^landing$', views.landing, name='landing')
+    url(r'^landing$', views.landing, name='landing'),
     url(r'^chats$', views.chats, name='chats')
 )
