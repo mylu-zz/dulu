@@ -50,6 +50,8 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
+
+      
     </script>
 
 	<!-- begins navbar -->
@@ -81,7 +83,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li><a href="#">Settings</a></li>
 	      	<li><a href="#">Help</a></li>
-	        <li><a href="#">Log Out</a></li>
+	      	<li><input id="Log Out" type="button" value="Log Out" onclick="FB.logout(function(response) {});;" /></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
