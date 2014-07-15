@@ -18,6 +18,7 @@
 
   <script type="text/javascript" src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="{{ STATIC_URL }}main.js"></script>
+  <script type="text/javascript" href="static/bootstrap/js/bootstrap.js"></script>
 
   <!-- favicon -->
   <link rel="icon" type="image/png" href="/img/favicon.png" />
@@ -81,8 +82,7 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li><a href="#">Settings</a></li>
-	      	<li><a href="#">Help</a></li>
+	      	<li><a href="settings">Settings</a></li>
 	      	<li><input id="Log Out" type="button" value="Log Out" onclick="FB.logout(function(response) {});;" /></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->

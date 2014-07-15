@@ -20,6 +20,20 @@ body {
   background-color: #e9eaed;
 }
 
+#settings_content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  background-color: #fff;
+  padding: 10px 10px;
+  border-color: #dee0e4;
+  border-style: solid;
+  border-color: #dee0e4;
+  border-width: 1px;
+  font-family: 'Lato';
+  font-size: 18px;
+}
+
 #box {
   margin-left: auto;
   margin-right: auto;

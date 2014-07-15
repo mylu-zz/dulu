@@ -56,4 +56,11 @@ def create_handler(request):
 
 def landing(request):
     return render(request, 'shotgun_app/landing.html')
+
+def settings(request):
+	user = Users.objects.get(pk=1)
+	context = {
+    	'user': user
+    }
+	return render(request, 'shotgun_app/settings.html', context)
    
